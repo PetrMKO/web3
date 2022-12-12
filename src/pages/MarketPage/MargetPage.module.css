@@ -1,0 +1,25 @@
+.market{
+    padding: 0 3em;
+    width: min-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    row-gap: 1rem;
+    justify-items: center;
+}
+
+.loadIcon{
+    margin-top: 1em;
+    fill: rgb(249, 196, 210);
+    width: 100px;
+    height: 100px;
+    animation-duration: 1s;
+    animation-name: spinner;
+    animation-iteration-count: infinite;
+}
+
+.loader{
+    margin-top: 1em;
+    width: 5px;
+    height: 5px;
+}

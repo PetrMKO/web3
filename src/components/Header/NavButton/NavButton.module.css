@@ -1,0 +1,21 @@
+.navLink{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 1.4em;
+  background-color: transparent;
+  transition: all .2s;
+  border: transparent solid 1px;
+  display: grid;
+  align-items: center;
+}
+
+.navLink:hover{
+  border: rgba(256, 256, 256, .6) solid 1px;
+}
+.activeLink{
+  border: rgba(256, 256, 256, .6) solid 1px;
+  box-shadow: 0.2em 0.2em #f9c4d2;
+}
+

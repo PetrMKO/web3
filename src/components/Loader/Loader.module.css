@@ -1,0 +1,22 @@
+.loadIcon{
+    fill: rgb(249, 196, 210);
+    width: 100px;
+    height: 100px;
+    animation-duration: 1s;
+    animation-name: spinner;
+    animation-iteration-count: infinite;
+
+}
+
+.loadWrapper{
+    position: relative;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

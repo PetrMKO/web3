@@ -1,0 +1,30 @@
+.header{
+  padding: 1em;
+  height: 5em;
+  display: inline-flex;
+  column-gap: 1em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.navBar{
+  display: inline-flex;
+  column-gap: 1em;
+}
+
+.sideBlock{
+  min-width: 210px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.reloadIcon{
+  height: 24px;
+  width: 24px;
+}
+

@@ -1,0 +1,150 @@
+.card {
+    width: 219px;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid #f9c4d2;
+    color: white;
+    overflow: hidden;
+    background-color:#a099ff;
+    background-image:
+            radial-gradient(at 88% 35%, rgb(152, 231, 156) 0, transparent 58%),
+            radial-gradient(at 67% 20%, hsla(357,94%,71%,1) 0, transparent 59%),
+            radial-gradient(at 83% 67%, hsla(222,81%,65%,1) 0, transparent 50%),
+            radial-gradient(at 31% 91%, hsla(9,61%,61%,1) 0, transparent 52%),
+            radial-gradient(at 27% 71%, hsla(336,91%,65%,1) 0, transparent 49%),
+            radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%),
+            radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
+}
+
+
+.iconWrapper {
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    width: 100%;
+    height: 219px;
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.4em;
+    padding: 0.5em 0;
+}
+
+.buyBtn{
+    margin-bottom: 5px;
+    float: left;
+    position: relative;
+    font: inherit;
+    cursor: pointer;
+    color: white;
+    background-color:  rgba(37, 70, 189, 0.7);
+    background-image: linear-gradient(0.25turn, rgba(87, 141, 185, 0.37),rgba(37, 70, 189, 0.7), rgba(119, 61, 190, 0.49));
+    border: none;
+    border-radius: 0.75rem;
+    width: calc(100%);
+    padding: 0.5em 0.2em;
+    transform-style: preserve-3d;
+    transition: all .15s;
+}
+
+.buyBtn:active{
+    transform: translate3d(0, 5px, 0);
+}
+
+.buyBtn:disabled{
+    background-color: rgba(46, 50, 65, 0.89);
+    background-image: linear-gradient(0.25turn, rgba(87, 141, 185, 0.37), rgba(33, 40, 72, 0.77), rgba(44, 23, 70, 0.49));
+}
+
+.buyBtn:disabled:active{
+    transform: translate3d(0, 0, 0);
+}
+
+.buyBtn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 105%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    transform: translate3d(0, 3px, -1em);
+    transition: all 0.15s, box-shadow 0.15s;
+}
+
+.buyBtn:disabled:active::before{
+    height: 100%;
+    transform: translate3d(0, 4.5px, -1em);
+}
+
+.buyBtn:active::before {
+    height: 100%;
+    transform: translate3d(0, 0, -1em);
+}
+
+.modal{
+    z-index: 100;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(47, 36, 24, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mintCard{
+    padding: 2.5em;
+    display: grid;
+    align-items: center;
+    grid-row-gap: 0.5em;
+    grid-template-columns: 8em auto;
+    grid-template-rows: auto;
+
+    background: rgba(51, 21, 124, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.countInput{
+    padding: .5em;
+    color: white;
+    background-color: rgba(249, 196, 210, 0.15);
+    border: none;
+    outline: 1px solid #a099ff;
+    border-radius: 0.5em;
+}
+
+.innerBuyButton{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 1em;
+}
+
+.allocationInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.errorMsg{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 1em;
+    word-break: break-word;
+}
